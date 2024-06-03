@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         DOCKER_CREDENTIALS_ID = 'dockerhub0cred' // Jenkins credentials ID for Docker Hub
-        DOCKER_IMAGE = 'hoshmand_shaho_mohammed/fastfood-website'
+        DOCKER_IMAGE = 'hoshmand shaho mohammed/fastfood-website'
     }
 
     stages {
