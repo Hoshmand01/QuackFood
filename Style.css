@@ -1,0 +1,578 @@
+
+
+
+body {
+    background-color: var(--white);
+    color: var(--sonic-silver);
+    font-size: 1.6rem;
+    line-height: 1.6;
+    overflow-x: hidden;
+
+}
+
+  body.active  { overflow: hidden; }
+  
+
+
+
+  /* Logo */
+
+  bh{
+
+	font-size: 30px;
+	font-family: 'Courier New', Courier, monospace;
+	color: rgb(255, 255, 255);
+	
+	background-color: rgb(255, 153, 0);
+	
+	border: rgb(255, 255, 255) solid 1px;
+	border-radius: 5px;
+	border-width: 10%;
+	position: relative;
+	left: 4%;
+	top: 2px;
+	
+	padding: 6px;
+	
+	}
+
+
+	/* Cart */
+ch{
+
+	font-size: 25px;
+	font-family: 'Courier New', Courier, monospace;
+	color: rgb(255, 255, 255);
+	
+	background-color: rgb(255, 153, 0);
+	
+	border: rgb(255, 255, 255) solid 1px;
+	border-radius: 5px;
+	border-width: 2px;
+	position: relative;
+	
+	top: 2px;
+	
+	padding: 6px;
+	
+}
+
+ch:hover{
+
+	background-color: #ffbb00;
+}
+
+mh{
+
+    font-size: 45px;
+    color: aliceblue;
+   
+    background-color: rgba(0, 0, 0, 0.466);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: relative;
+    left: 5%;
+    top: 400px;
+    padding: 5px;
+
+    }
+
+
+sh{
+
+    font-size: 30px;
+    color: aliceblue;
+    
+    background-color: rgba(0, 0, 0, 0.269);
+    position: relative;
+
+    padding: 5px;
+    margin: 600px;
+    
+    }
+
+
+
+	.hidden-burger , .hidden-pizza , .hidden-chicken , .hidden-chips {
+		display: none;
+	  }
+	  
+
+
+/*---------------------------------------------*/
+
+
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+html {
+	font-size: 10px;
+	font-family: 'Montserrat', sans-serif;
+	scroll-behavior: smooth;
+}
+a {
+	text-decoration: none;
+}
+.container {
+	min-height: 100vh;
+	max-width: 100%;
+	
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    position: relative;
+
+
+
+
+}
+.container2 {
+	min-height: 100vh;
+	
+	max-width: 100%;
+
+	display: flex;
+	align-items: center;
+    font-size: 50px;
+    position: relative;
+    left: 20%;
+  font-family: var(--ff-rubik);
+  color: var(--rich-black-fogra-29);
+  line-height: 1.2;
+  letter-spacing: -1px;
+
+
+}
+
+.responsive-heading {
+	font-size: 80px;
+  }
+
+
+
+img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+p {
+	color: black;
+	font-size: 1.4rem;
+	margin-top: 5px;
+	line-height: 2.5rem;
+	font-weight: 300;
+	letter-spacing: 0.05rem;
+}
+.section-title {
+	font-size: 4rem;
+	font-weight: 300;
+	color: black;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+	letter-spacing: 0.2rem;
+	text-align: center;
+}
+.section-title span {
+	color: crimson;
+}
+
+
+/*  some button */ 
+
+
+
+.cta {
+	display: inline-block;
+	padding: 10px 30px;
+	color: rgb(0, 0, 0);
+	background-color: transparent;
+	border: 2px solid rgb(255, 208, 0);
+
+	font-size: 2rem;
+	text-transform: uppercase;
+	letter-spacing: 0.1rem;
+	margin-top: 30px;
+	transition: 0.3s ease;
+	transition-property: background-color, color;
+}
+.cta:hover {
+	color: rgb(255, 255, 255);
+	background-color: rgb(255, 153, 0);
+    border: 1.5px solid rgb(0, 0, 0);
+}
+
+
+
+
+
+
+
+/* -------------------------------------------- */
+
+.brand h1 {
+	font-size: 3rem;
+	text-transform: uppercase;
+	color: white;
+}
+.brand h1 span {
+	color: crimson;
+}
+
+
+.brand2 h2 {
+	font-size: 3rem;
+	text-transform: uppercase;
+	color: white;
+}
+
+/*---------- Header section ----------*/
+#header {
+	position: fixed;
+	z-index: 1000;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: auto;
+}
+
+
+#header .header {       /* navbar background */
+	min-height: 8vh;
+	background-color: rgba(255, 255, 255, 0.571); 
+	transition: 0.3s ease background-color;
+}
+
+#header .nav-bar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	height: 100%;
+	max-width: 1300px;
+	padding: 0 5px;
+}
+#header .nav-list ul {
+	list-style: none;
+	position: absolute;
+	background-color: rgb(31, 30, 30);
+	width: 100vw;
+	height: 100vh;
+	left: 100%;
+	top: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+	overflow-x: hidden;
+	transition: 0.5s ease left;
+}
+#header .nav-list ul.active {
+	left: 0%;
+}
+
+#header .nav-list ul a {  /* navbar texts */
+	font-size: 2.5rem;
+	font-weight: 500;
+	letter-spacing: 0.2rem;
+	text-decoration: none;
+	color: rgb(255, 136, 0);
+	text-transform: uppercase;
+	padding: 15px;
+	display: block;
+}
+#header .nav-list ul a::after {
+	content: attr(data-after);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0);
+	color: rgba(240, 248, 255, 0.021);
+	font-size: 13rem;
+	letter-spacing: 50px;
+	z-index: -1;
+	transition: 0.3s ease letter-spacing;
+}
+#header .nav-list ul li:hover a::after {
+	transform: translate(-50%, -50%) scale(1);
+	letter-spacing: initial;
+}
+#header .nav-list ul li:hover a {
+	color: rgb(255, 255, 255);
+    background-color: rgb(255, 153, 0);
+    border: 1px solid rgb(0, 0, 0);
+}
+
+/*----- End Header section -----*/
+
+
+
+.hero-banner { display: flex; }
+
+
+
+
+/*------food buttons------*/
+
+.fb {
+	display: inline-block;
+	padding: 6px 10px;
+	color: rgb(255, 255, 255);
+	background-color: #a48a42;
+	border: 2px solid rgb(255, 208, 0);
+	font-size: 2rem;
+	text-transform: uppercase;
+	letter-spacing: 0.1rem;
+	margin-top: 30px;
+	transition: 0.3s ease;
+	transition-property: background-color, color;
+}
+.fb:hover {
+	color: rgb(255, 255, 255);
+	background-color: rgb(255, 153, 0);
+    border: 1.5px solid rgb(255, 255, 255);
+}
+
+
+
+
+/*----- Food Choices Section -----*/
+
+#Foodch .Foodch {
+	flex-direction: column;
+	text-align: center;
+	max-width: 1500px;
+	margin: 0 auto;
+	padding: 100px 0;
+}
+#Foodch .Foodch-top {
+	max-width: 500px;
+	margin: 0 auto;
+}
+#Foodch .Foodch-bottom {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-top: 50px;
+
+}
+
+
+/*-------------------*/
+
+#Foodch .Foodch-item {
+	flex-basis: 80%;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: column;
+	padding: 30px;
+	border-radius: 10px;
+	background-image: url(img/b.jpg);
+	background-size: cover;
+	margin: 10px 5%;
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+}
+
+
+
+#Foodch .Foodch-item::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-image: linear-gradient(180deg, #ffbb00 0%, #000000 65%);
+	opacity: 0.55;
+	z-index: -1;
+}
+#Foodch .Foodch-bottom .icon {
+	height: 80px;
+	width: 80px;
+	margin-bottom: 20px;
+}
+#Foodch .Foodch-item h2 {
+	font-size: 2rem;
+	color: white;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+}
+#Foodch .Foodch-item p {
+	color: white;
+	text-align: left;
+}
+
+
+	#Foodch .Foodch-bottom .Foodch-item {
+		flex-basis: 45%;
+		margin: 2.5%;
+	}
+
+
+
+	
+	/*----- End Food Choices Section -----*/
+
+
+
+/*---------------------------------------------------------*/
+
+
+/*----- Type Food Choices Section -----*/
+
+
+#typech .typech {
+	flex-direction: column;
+	text-align: center;
+	max-width: 1500px;
+	margin: 0 auto;
+	padding: 100px 0;
+}
+#typech .typech-top {
+	max-width: 500px;
+	margin: 0 auto;
+}
+#typech .typech-bottom {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-top: 50px;
+
+}
+
+
+/*-------------------*/
+
+#typech .typech-item {
+	flex-basis: 80%;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: column;
+	padding: 30px;
+	border-radius: 10px;
+	background-image: url(img/b.jpg);
+	background-size: cover;
+	margin: 10px 5%;
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+}
+
+
+
+#typech .typech-item::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-image: linear-gradient(180deg, #ffbb00 0%, #000000 80%);
+	opacity: 0.55;
+	z-index: -1;
+}
+#typech .typech-bottom .icon {
+	height: 80px;
+	width: 80px;
+	margin-bottom: 20px;
+}
+#typech .typech-item h2 {
+	font-size: 2rem;
+	color: white;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+}
+#typech .typech-item p {
+	color: white;
+	text-align: left;
+}
+
+
+
+
+	#typech .typech-bottom .typech-item {
+		flex-basis: 45%;
+		margin: 2.5%;
+	}
+	
+
+	/*----- End Type Food Choices Section -----*/
+
+
+
+
+
+
+
+
+
+
+/*---------- Media Query For Desktop ----------*/
+@media only screen and (min-width: 1200px) {
+
+	/*----- header -----*/
+
+	#header .nav-list ul {
+		position: initial;
+		display: block;
+		height: auto;
+		width: fit-content;
+		background-color: transparent;
+	}
+	#header .nav-list ul li {
+		display: inline-block;
+	}
+	#header .nav-list ul li a {
+		font-size: 1.8rem;
+	}
+	#header .nav-list ul a:after {
+		display: none;
+	}
+	/*----- End header -----*/
+
+	#Foodch .Foodch-bottom .Foodch-item {
+		flex-basis: 22%;
+		margin: 1.5%;
+	}
+
+	#typech .typech-bottom .typech-item {
+		flex-basis: 22%;
+		margin: 1.5%;
+	}
+}
+/*---------- End  Media Query For Desktop ----------*/
+
+
+/*---------- Media Query For smaller screens ----------*/
+
+  /* Media query for smaller screens */
+  @media (max-width: 600px) {
+	.responsive-heading {
+	  font-size: 24px;
+	}}
+
+@media (max-width: 600px) {
+	.header .nav-bar .nav-list ul {
+		font-size: 1rem;
+	}
+  }
+
+  @media (max-width: 600px) {
+	.container2 {
+		left: 5%;
+	}
+  }
+
+
+/*---------- End  Media Query For smaller screens ----------*/
+    
+
+  
